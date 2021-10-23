@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: qa
+
+---
+spring:
+ config:
+   activate:
+     on-profile: dev
+
+server:
+  port: 9090
+
+default:
+  course:
+    name: Batman
+    chapterCount: 5
+
+course:
+  name: Superman
+  chapterCount: 7
+
+---
+spring:
+  config:
+    activate:
+      on-profile: qa
+
+server:
+  port: 9091
+
+default:
+  course:
+    name: Batman
+    chapterCount: 5
+
+course:
+  name: Superman
+  chapterCount: 7
